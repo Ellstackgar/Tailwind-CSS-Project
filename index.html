@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-gold: #da373d;
+        --color-deep-charcoal: #1a1a1a;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+
+    <title>Tailwind CSS</title>
+</head>
+
+<body class="uppercase font-bold">
+
+
+    <!--header section-->
+    <header>
+
+        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+            <!--- navigation bar -->
+            <div class="flex">
+
+
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
+                Student_Portfolio_v1
+                </a>
+
+            </div>
+
+            <nav class="flex items-center justify-center text-gray-600">
+                <ul class="flex items-center gap-8 font-normal">
+                    <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
+                    <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
+                    <li><a href="contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex justify-end items-center">
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
+            </div>
+         </div>
+
+    </header>
+
+    <main>
+    
+        <!--- Hero area -->
+        <section class="grid grid-cols-12 gap-12 items-start p-8 mt-15">
+             <!--- left side - title -->
+             <div class="col-span-8">
+
+                <p class="tracking-widest mb-4 text-gray-500">
+                    Selected works 2023-24
+                </p>
+
+                <h1 class="text-8xl">
+                    Architectural <br> integrity & <br>spatial logic.
+                </h1>
+
+            </div>
+
+            <div class="col-span-4 pr-8">
+                <!--- right side - text and buttons -->
+
+                <div class="pl-6 border-l-3 border-deep-charcoal">
+                    <p class="text-gray mb-8 leading-relaxed font-normal normal-case">
+                    A focused investigation into modular structures and technical precision
+                    within high-density urban environments. Designed for clarity, authority,
+                    and high-performance utility.
+                    </p>
+                </div>
+
+                <div class="flex gap-4">
+                    <a class="border bg-black text-white px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold" href="projects.html">
+                        Explore Portfolio
+                    </a>
+
+                    <a class="border border-gray-200 bg-gray-200 px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold " href="about-us.html">
+                        Our Philosophy
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!--Stats area-->
+        <section class="grid grid-cols-4 divide-x divide-gray-300 pt-10 pb-10 border-t border-b">
+            <div class="px-6 py-4">
+                <p class="text-s uppercase text-gray-500">Projects Completed</p>
+                <p class="text-3xl font-bold italic">42+</p>
+            </div>
+
+             <div class="px-6 py-4">
+                <p class="text-s uppercase text-gray-500">Global Awards</p>
+                <p class="text-3xl font-bold italic">12</p>
+            </div>
+
+            <div class="px-6 py-4">
+                <p class="text-s uppercase text-gray-500">Technical Certs</p>
+                <p class="text-3xl font-bold italic">08</p>
+            </div>
+
+            <div class="px-6 py-4">
+                <p class="text-s uppercase text-gray-500">Design Labs</p>
+                <p class="text-3xl font-bold italic">03</p>
+            </div>
+            
+        </section>
+
+        <!--Featured Project, Methodology, Lab Archive, Contact Page Link-->
+        <section class="grid grid-cols-4 gap-4 p-10">
+
+            <!--left side of section-->
+            <article class="col-span-2 relative overflow-hidden
+            bg-[url(featured-project-background.jpg)] bg-cover bg-center bg-no-repeat">
+
+                <div class="flex flex-col h-full p-8 mr-4 justify-end text-white">
+                    <p>Project 004</p>
+                    <h2 class="text-5xl">The Monolith Pavilion</h2>
+                    <p class="font-normal normal-case mt-4 mb-4">Exploration of concrete as a fluid yet structural element in public transit hubs</p>
+                    <a href="projects/monolith-pavilion.html" class="inline-flex items-center gap-2 hover:underline">View Case Study <span>&rarr;</span></a>
+                </div>
+            </article>
+
+            <!--right side of section-->
+            <div class="col-span-2 ml-4">
+
+                <!--methodology box-->
+                <div class="bg-gray-200 p-10 pl-8 pr-8">
+                    <div>
+                        <p class=" text-xl font-normal tracking-widest mb-4">Methodology</p>
+                        <h2 class="text-3xl mb-4">Bim Integration & structural <br>analytics</h2>
+                        <p id="methodology-text" class="normal-case font-normal mb-4 min-h-[80px] h-[160px] w-4/5 text-lg">Every project follows a rigid grid system of 8px increments,
+                        ensuring mathematical perfection from initial concept to the final blueprint.</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 border-t-4 border-gray-300 pt-6 text-3xl font-normal gap-4">
+                        <button
+                            class="group cursor-pointer text-left"
+                            data-topic="cad"
+                            type="button"
+                        >
+                            CAD
+                            <span class="block h-1 bg-gray-300 group-hover:bg-black mt-2"></span>
+                        </button>
+
+ <button
+                            class="group cursor-pointer text-left"
+                            data-topic="mapping"
+                            type="button"
+                        >
+                            3D MAPPING
+                            <span class="block h-1 bg-gray-300 group-hover:bg-black mt-2"></span>
+                        </button>
+ <button
+                            class="group cursor-pointer text-left"
+                            data-topic="sustainability"
+                            type="button"
+                        >
+                            SUSTAINABILITY
+                            <span class="block h-1 bg-gray-300 group-hover:bg-black mt-2"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--projects and contact page links-->
+                <div class="flex justify-between col-span-2 mt-8 min-h-[200px] md:min-h-[550px] gap-8">
+                    <div class="bg-gray-100 flex-1 p-8 border-r-2 relative">
+                        <h3 class="font-normal tracking-widest text-xl">Lab Archive</h3>
+                        <p class="text-3xl mt-2">Shadow Studies</p>
+                        <a href="projects/shadow-studies.html" class="absolute right-0 bottom-0 max-w-2/5 max-h-2/5 hover:border border-white" >
+                            <img src="black-space-background.jpg" alt="Image for Shadow Studies"
+                            class="w-full h-auto">                        
+                        </a>
+                    </div>
+
+                    <div class="bg-deep-charcoal text-white flex-1 p-8">
+                        <div class="p-8">
+                            <img src="torch.png" alt="Architectural Logo" class="w-2/5 h-1/5 mb-4 mt-20">
+                            <h2 class="font-normal tracking-wide text-3xl w-7/10">Join the Architectural Dialogue.</h2>
+                            <a href="contact.html" class="inline-block font-normal tracking-widest mt-6 p-4 border-4 hover:text-brand-gold">Submit Inquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+        </section>
+    
+        <!--Current Projects Section-->
+        <section>
+            <!--Current Projects title and sorting bar -->
+            <div class="border-b-4 pb-10">
+                    <div class="flex items-start justify-between">
+                        <h1 class="text-5xl pl-4">Current Projects</h1>
+                        <div class="flex flex-col items-end">
+                            <label for="sort"
+                            class="font-normal tracking-widest mb-2 text-xl"
+                            >
+                                Sort By
+                            </label>
+
+                            <select
+                                id="sort"
+                                class="border-b border-deep-charcoal"
+                            >
+                                <option value="2024">Year: 2024</option>
+                                <option value="2023">Year: 2023</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+
+            <!--Projects showings by year -->
+            <div id="project-list" class="divide-y ">
+               <!--empty div for javascript to change projects per showing -->
+            </div>
+        </section>
+
+        <!-- Sign up for email alerts section -->
+        <section class="bg-black text-white py-10 pb-50 mt-30">
+                <h1 class="text-center text-7xl max-w-4/5 mx-auto mt-20">Stay updated on the latest structural investigations.</h1>
+                <form id="newsletter-form" class="mx-auto mt-20 max-w-2/5">
+
+                    <div class="flex border-b-2 border-white">
+
+                        <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="EMAIL ADDRESS"
+                        required
+                        class="flex-1 bg-transparent py-4 text-sm tracking-widest placeholder-gray-700 outline-none"
+                        >
+
+                        <button
+                        type="submit"
+                        class="px-4 text-2xl hover:cursor-pointer">
+                            <span>&rarr;</span>
+                        </button>
+
+    </div>
+
+    <p id="message" class="mt-4 text-sm text-white"></p>
+
+</form>
+        </section>
+
+
+    </main>
+
+
+    <!--footer section-->
+    <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
+
+        <div class="grid grid-cols-2 p-3">
+
+            <div class="flex text-sm text-center font-normal px-8">
+
+            © 2024 Architectural_systems. all rights reserved.
+            </div>
+
+            <div>
+                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
+                    <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
+                    <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-brand-gold">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

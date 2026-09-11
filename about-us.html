@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-gold: #da373d;
+        --color-deep-charcoal: #1a1a1a;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+
+    <title>Tailwind CSS</title>
+</head>
+
+<body class="uppercase font-bold">
+
+       <header>
+
+        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+            <!--- navigation bar -->
+            <div class="flex">
+
+
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
+                Student_Portfolio_v1
+                </a>
+
+            </div>
+
+            <nav class="flex items-center justify-center text-gray-600">
+                <ul class="flex items-center gap-8 font-normal">
+                    <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
+                    <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
+                    <li><a href="contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex justify-end items-center">
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
+            </div>
+         </div>
+
+    </header>
+
+
+    <main>
+
+    </main>
+
+
+
+    <!--footer section-->
+    <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
+
+        <div class="grid grid-cols-2 p-3">
+
+            <div class="flex text-sm text-center font-normal px-8">
+
+            © 2024 Architectural_systems. all rights reserved.
+            </div>
+
+            <div>
+                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
+                    <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
+                    <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-brand-gold">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

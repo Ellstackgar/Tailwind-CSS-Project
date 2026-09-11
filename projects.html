@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-gold: #da373d;
+        --color-deep-charcoal: #1a1a1a;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+
+    <title>Tailwind CSS Projects Page</title>
+
+</head>
+
+<body class="uppercase font-bold">
+
+       <header>
+
+        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+            <!--- navigation bar -->
+            <div class="flex">
+
+
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
+                Student_Portfolio_v1
+                </a>
+
+            </div>
+
+            <nav class="flex items-center justify-center text-gray-600">
+                <ul class="flex items-center gap-8 font-normal">
+                    <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
+                    <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
+                    <li><a href="contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex justify-end items-center">
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
+            </div>
+         </div>
+
+    </header>
+
+<section>
+
+    <!--Heading of selected works -->
+    <div class="p-4 m-4 mt-8 mb-12 border-l-8">
+        <h2 class="text-8xl">selected works</h2>
+        <p class="mt-4 font-normal max-w-2/5 tracking-wide">An archival collection of academic and personal projects
+            focusing on structural integreity, computational design, and
+            interactive systems. 2022-2024. </p>
+    </div>
+<!-- project cards section holder with javascript to make them appear -->
+    <div
+        id="project-cards"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-1"
+    >      
+    </div>
+
+
+        <div class="flex justify-between items-center py-6">
+
+            <!-- information -->
+        <div class="flex w-1/2 justify-between border-t-3 pt-4 ml-2 tracking-wide">
+            <p class="text-xs font-bold">
+                ARCHIVE SECTION END
+            </p>
+
+            <p class="text-xs font-bold" id="page-number">
+                VIEWING PAGE 01 OF 04
+            </p>
+        </div>
+
+            <!-- Button -->
+            <button
+                id="load-more"
+                type="button"
+                class="border border-black px-12 py-5 text-sm bg-gray-200 font-bold hover:cursor-pointer hover:border-brand-gold"
+            >
+                LOAD NEXT ENTRIES
+            </button>
+  
+    </div>
+
+</section>
+
+    <!--footer section-->
+    <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
+
+        <div class="grid grid-cols-2 p-3">
+
+            <div class="flex text-sm text-center font-normal px-8">
+
+            © 2024 Architectural_systems. all rights reserved.
+            </div>
+
+            <div>
+                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
+                    <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
+                    <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-brand-gold">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>

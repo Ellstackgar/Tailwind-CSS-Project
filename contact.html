@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-gold: #da373d;
+        --color-deep-charcoal: #1a1a1a;
+      }
+    </style>
+
+    <script src="script.js" defer></script>
+
+    <title>Tailwind CSS</title>
+</head>
+
+<body class="uppercase font-bold">
+
+       <header>
+
+        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+            <!--- navigation bar -->
+            <div class="flex">
+
+
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
+                Student_Portfolio_v1
+                </a>
+
+            </div>
+
+            <nav class="flex items-center justify-center text-gray-600">
+                <ul class="flex items-center gap-8 font-normal">
+                    <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
+                    <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
+                    <li><a href="contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="flex justify-end items-center">
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
+            </div>
+         </div>
+
+    </header>
+
+    <!--leave your mark title section -->
+    <section>
+        <div class="m-8 border-l border-l-4 pl-8">
+            <p class="text-gray-500 tracking-widest">03 // inquiry_node</p> 
+            <h2 class="text-8xl font-black">Leave Your</h2>
+            <h2 class="text-8xl font-black italic underline text-gray-600">Mark.</h2>
+            <p class="max-w-1/2 tracking-widest text-lg mt-4">Currently exploring the intersection of tectonic
+                materiality and digital interfaces. open for architectural visualizations,
+                full-stack collaborations, and technical dialogue.</p>
+        </div>
+
+
+        <!--contact form, map and contact links -->
+        <div class="grid grid-cols-[60%_40%] gap-12 border-t m-8">
+            
+            <!-- left column form -->
+            <form class="border border-2 border-gray-500 mt-20 p-8">
+
+                <div class="grid grid-cols-2 gap-12">
+                    <div class="flex flex-col gap-2">
+                        <label for="name" class="tracking-widest">Full Name</label>
+                        <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="ALEX VANCE"
+                        class="border w-full px-2 py-3"
+                    >   
+                    </div>
+
+                <div class="flex flex-col gap-2">
+                <label for="email" class="tracking-widest">Email Address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="EXAMPLE@DOMAIN.COM"
+                    class="border w-full px-2 py-3"
+                >
+                </div>
+                </div>
+
+                <div class="flex flex-col gap-2 mt-8">
+                <label for="subject" class="tracking-widest">Subject</label>
+                <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="PROJECT COLLABORATION"
+                    class="border w-full px-2 py-3"
+                >
+                </div>
+
+                <div class="flex flex-col gap-2 mt-8">
+                <label for="message" class="tracking-widest">Message</label>
+                <textarea
+                    rows="8"
+                    placeholder="DESCRIBE THE SCOPE..."
+                    class="border w-full px-2 py-3"
+                ></textarea>
+                </div>
+
+                <button 
+                type="submit"
+                hover-m
+                class="flex border items-center gap-10 text-lg border bg bg-deep-charcoal text-white uppercase tracking-widest p-6 mt-10 hover:cursor-pointer hover:border-brand-gold">
+                Initialize Contact <span>&rarr;</span>
+                </button>
+            </form>
+
+            <!-- right side contact details and map -->
+            <div class="p-10">
+
+                <!--geographic node -->
+                <section class="flex-col items-center mt-15">   
+                    <div class="flex items-center gap-4">
+                        <span class="h-1 w-10 bg-black"></span>
+
+                        <span class="text-xs font-bold uppercase tracking-widest">
+                        Geographic Node
+                        </span>
+                    </div>
+
+                    <h2 class="mt-8 text-3xl">Metro Station 404</h2>
+
+                    <p class="font-normal mt-8">128 tech pavilion, level 02</p>
+                    <p class="font-normal mb-8">Zurich, Switzerland CH-8001</p>
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Grossmünster,+Zurich,+Switzerland&output=embed"
+                        class="w-full h-128"
+                        style="border:0;"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+
+                </section>
+
+                <!-- direct reach -->
+                <section class="flex-col items-center mt-15">
+                    <div class="flex items-center gap-4">
+                        <span class="h-1 w-10 bg-black"></span>
+
+                        <span class="text-xs font-bold uppercase tracking-widest">
+                        Direct Reach
+                        </span>
+                    </div>
+
+                    <a
+                    href="mailto:hello@studioarchive.io"
+                    class="flex items-center justify-between border-b border-gray-300 py-4 text-2xl"
+                    >
+                        <span class="font-bold">HELLO@STUDIOARCHIVE.IO</span>
+                        <span>&#8599;&#xfe0e;</span>
+                    </a>
+
+                    <a
+                        href="tel:+41000000000"
+                        class="flex items-center justify-between border-b border-gray-300 py-4 text-2xl"
+                    >
+                        <span class="font-bold">+41000000000</span>
+                        <span>&#8599;&#xfe0e;</span>
+                    </a>
+
+                </section>
+            </div>
+        </div>
+    
+    </section>
+
+
+
+
+        <!--footer section-->
+    <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
+
+        <div class="grid grid-cols-2 p-3">
+
+            <div class="flex text-sm text-center font-normal px-8">
+
+            © 2024 Architectural_systems. all rights reserved.
+            </div>
+
+            <div>
+                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
+                    <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
+                    <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>
+                    <li><a href="https://x.com" target="_blank" class="hover:text-brand-gold">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
