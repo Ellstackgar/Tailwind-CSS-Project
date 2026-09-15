@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="uppercase font-bold">
+<body class="uppercase font-bold bg-gray-100">
 
        <header>
 
@@ -53,7 +53,7 @@
 <section>
 
     <!--Heading of selected works -->
-    <div class="p-4 m-4 mt-8 mb-12 border-l-8">
+    <div class="p-4 ml-10 m-4 mt-8 mb-12 border-l-8">
         <h2 class="text-8xl">selected works</h2>
         <p class="mt-4 font-normal max-w-2/5 tracking-wide">An archival collection of academic and personal projects
             focusing on structural integreity, computational design, and
@@ -66,11 +66,11 @@
     >      
     </div>
 
-
-        <div class="flex justify-between items-center py-6">
+<!-- underneath table, shows page number and changes pages-->
+        <div class="grid grid-cols-[60%_20%_20%] place-items-center gap-12 py-6">
 
             <!-- information -->
-        <div class="flex w-1/2 justify-between border-t-3 pt-4 ml-2 tracking-wide">
+        <div class="flex justify-between border-t-3 pt-4 ml-2 w-full tracking-wide">
             <p class="text-xs font-bold">
                 ARCHIVE SECTION END
             </p>
@@ -80,11 +80,20 @@
             </p>
         </div>
 
-            <!-- Button -->
+            <!-- Buttons to load pages-->
+
+            <button
+                id="load-less"
+                type="button"
+                class="border border-black px-12 w-13/20 py-5 text-sm bg-gray-200 font-bold hover:cursor-pointer hover:border-brand-gold"
+            >
+                LOAD PREV ENTRIES
+            </button>
+
             <button
                 id="load-more"
                 type="button"
-                class="border border-black px-12 py-5 text-sm bg-gray-200 font-bold hover:cursor-pointer hover:border-brand-gold"
+                class="border border-black mr-32 px-12 w-13/20 py-5 text-sm bg-gray-200 font-bold hover:cursor-pointer hover:border-brand-gold"
             >
                 LOAD NEXT ENTRIES
             </button>

@@ -91,7 +91,73 @@ const projects = [
         url: "projects/shadow-studies.html",
         image: "project-card-images/shadow-studies.jpg",
         description: "An exploration of how changing light and shadows transform architectural surfaces.",
-    }
+    },
+    {
+        year: 2024,
+        number: "007",
+        title: "Fractured Pavilion",
+        location: "Porto, PT",
+        tags: ["Public", "Modern"],
+        url: "projects/fractured-pavilion.html",
+        image: "project-card-images/fractured-pavilion.jpg",
+        description: "Angular volumes shifted against one another to create a sequence of sheltered outdoor rooms.",
+    },
+
+    {
+        year: 2024,
+        number: "008",
+        title: "The Timber Archive",
+        location: "Oslo, NO",
+        tags: ["Public", "Interior"],
+        url: "projects/timber-archive.html",
+        image: "project-card-images/timber-archive.jpg",
+        description: "A repository of local records housed within a warm, exposed timber structural grid.",
+    },
+
+    {
+        year: 2023,
+        number: "009",
+        title: "Threshold House",
+        location: "Kyoto, JP",
+        tags: ["Residential", "Minimalist"],
+        url: "projects/threshold-house.html",
+        image: "project-card-images/threshold-house.jpg",
+        description: "A sequence of sliding thresholds blurring the boundary between interior rooms and garden.",
+    },
+
+    {
+        year: 2023,
+        number: "010",
+        title: "Sunken Courtyard Museum",
+        location: "Cairo, EG",
+        tags: ["Public", "Concrete"],
+        url: "projects/sunken-courtyard-museum.html",
+        image: "project-card-images/sunken-courtyard-museum.jpg",
+        description: "Gallery spaces arranged below grade around a central courtyard shielded from the desert heat.",
+    },
+
+    {
+        year: 2023,
+        number: "011",
+        title: "Glass Reservoir",
+        location: "Reykjavik, IS",
+        tags: ["Science", "Modern"],
+        url: "projects/glass-reservoir.html",
+        image: "project-card-images/glass-reservoir.jpg",
+        description: "A transparent research facility set against volcanic terrain, designed to track geothermal activity.",
+    },
+
+    {
+        year: 2023,
+        number: "012",
+        title: "Terraced Housing Block",
+        location: "Medellín, CO",
+        tags: ["Urban", "Residential"],
+        url: "projects/terraced-housing-block.html",
+        image: "project-card-images/terraced-housing-block.jpg",
+        description: "Stepped housing units following the hillside contour, each unit opening onto a shared terrace.",
+    },
+    
 ];
 
 /* code for changing project list on dropdown menu on home page */
@@ -166,41 +232,41 @@ form.addEventListener("submit", (event) => {
 
 /* project cards appearing on project screen */
 const projectCards = document.querySelector("#project-cards");
+const loadMore = document.querySelector("#load-more");
+const loadLess = document.querySelector("#load-less");
+const pageNumber = document.querySelector("#page-number");
 
-if (projectCards) {
+const PAGE_SIZE = 6;
+let currentPage = 1;
+
+/*updates automatically as "projects" grows/shrinks */
+const totalPages = Math.ceil(projects.length / PAGE_SIZE);
 function displayProjectCards() {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const pageItems = projects.slice(start, end);
 
-    projectCards.innerHTML = projects.map(project => `
-        
+    projectCards.innerHTML = pageItems.map(project => `
         <div class="p-8 border border-gray-300 ">
-
-        <article class=" p-4">
-
-            <a href="${project.url}">
-
-                <img
-                    src="${project.image}"
-                    alt="${project.title}"
-                    class="w-full aspect-[4/3] object-cover border border-transparent hover:border-gray-500 border-5"
-                >
-            </a>
-
+            <article class=" p-4 group">
+                <a href="${project.url}">
+                    <img
+                        src="${project.image}"
+                        alt="${project.title}"
+                        class="w-full aspect-[4/3] object-cover border border-transparent group-hover:border-gray-500 border-5"
+                    >
+                </a>
 
                 <div class="mt-4">
-
                     <div class="flex justify-between items-start">
-
                         <a href="${project.url}">
-
-                        <h2 class="font-bold uppercase hover:underline decoration-gray-500 decoration-3">
-                            ${project.title}
-                        </h2>
+                            <h2 class="font-bold uppercase group-hover:underline decoration-gray-300 decoration-3">
+                                ${project.title}
+                            </h2>
                         </a>
-
                         <span class="text-xs border p-2 border-gray-300 bg-gray-100">
                             ID_${project.number}
                         </span>
-
                     </div>
 
                     <p class="mt-3 text-sm font-normal normal-case">
@@ -214,33 +280,47 @@ function displayProjectCards() {
                             </span>
                         `).join("")}
                     </div>
-
                 </div>
-
-        </article>
+            </article>
         </div>
     `).join("");
-}
 
-displayProjectCards();
-}
-
-const loadMore = document.querySelector("#load-more");
-const pageNumber = document.querySelector("#page-number");
-
-let currentPage = 1;
-const totalPages = 4;
-
-if (loadMore) {
-loadMore.addEventListener("click", () => {
-
-    if (currentPage < totalPages) {
-        currentPage++;
-
-        pageNumber.textContent =
-            `VIEWING PAGE 0${currentPage} OF 0${totalPages}`;
+    if (pageNumber) {
+        pageNumber.textContent = `VIEWING PAGE 0${currentPage} OF 0${totalPages}`;
     }
 
-});
+    if (loadMore) {
+        loadMore.disabled = currentPage >= totalPages;
+    }
 
+    if (loadLess) {
+        loadLess.disabled = currentPage <= 1;
+    }
+}
+
+/* shows project cards */
+if (projectCards) {
+    displayProjectCards();
+}
+
+
+/* loads next pages */
+if (loadMore) {
+    loadMore.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayProjectCards();
+        }
+    });
+}
+
+
+/* loads previous pages */
+if (loadLess) {
+    loadLess.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            displayProjectCards();
+        }
+    });
 }
