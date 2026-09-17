@@ -25,18 +25,20 @@
     <!--header section-->
     <header>
 
-        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+        <div class="flex flex-col md:grid md:grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2 md:items-center">
             <!--- navigation bar -->
-            <div class="flex">
 
+            <div class="flex justify-between items-center md:contents">
 
-                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
-                Student_Portfolio_v1
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 justify-between text-base md:text-lg px-2 hover:text-brand-gold md:order-1">
+                    Student_Portfolio_v1
                 </a>
+
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold md:order-3 md:justify-self-end">Download_CV</a>
 
             </div>
 
-            <nav class="flex items-center justify-center text-gray-600">
+            <nav class="flex items-center justify-center mt-4 md:mt-0 md:order-2 text-gray-600">
                 <ul class="flex items-center gap-8 font-normal">
                     <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
                     <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
@@ -44,9 +46,6 @@
                 </ul>
             </nav>
 
-            <div class="flex justify-end items-center">
-                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
-            </div>
          </div>
 
     </header>
@@ -54,24 +53,24 @@
     <main>
     
         <!--- Hero area -->
-        <section class="grid grid-cols-12 gap-12 items-start p-15">
+        <section class="grid grid-cols-1 gap-8 lg:grid lg:grid-cols-12 lg:gap-12 items-start lg:p-15">
              <!--- left side - title -->
-             <div class="col-span-8">
+             <div class="col-span-1 lg:col-span-8 mx-8 lg:mx-0">
 
                 <p class="tracking-widest mb-4 text-gray-500">
                     Selected works 2023-24
                 </p>
 
-                <h1 class="text-8xl">
-                    Architectural <br> integrity & <br>spatial logic.
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl">
+                    Architectural <br class="hidden lg:block"> integrity & <br class="hidden lg:block">spatial logic.
                 </h1>
 
             </div>
 
-            <div class="col-span-4 pr-8">
+            <div class="col-span-1 lg:col-span-4 lg:pr-8 mx-8 lg:mx-0">
                 <!--- right side - text and buttons -->
 
-                <div class="pl-6 border-l-3 border-deep-charcoal">
+                <div class="pl-6 border-l-3 border-deep-charcoal ">
                     <p class="text-gray mb-8 leading-relaxed font-normal normal-case">
                     A focused investigation into modular structures and technical precision
                     within high-density urban environments. Designed for clarity, authority,
@@ -79,12 +78,12 @@
                     </p>
                 </div>
 
-                <div class="flex gap-4">
-                    <a class="border bg-black text-white px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold" href="projects.html">
+                <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                    <a class="border bg-black text-white text-center px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold" href="projects.html">
                         Explore Portfolio
                     </a>
 
-                    <a class="border border-gray-200 bg-gray-200 px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold " href="about-us.html">
+                    <a class="border border-gray-200 bg-gray-200 text-center px-5 text-lg py-7 tracking-widest hover:text-brand-gold hover:border-brand-gold " href="about-us.html">
                         Our Philosophy
                     </a>
                 </div>
@@ -93,23 +92,24 @@
         </section>
 
         <!--Stats area-->
-        <section class="grid grid-cols-4 divide-x divide-gray-300 pt-10 pb-10 px-8 border-t border-b">
-            <div class="px-6 py-4">
+        <section class="grid grid-cols-2 md:grid-cols-4 pt-10 pb-10 px-8 border-t border-b">
+          
+            <div class="px-6 py-4 border-r border-gray-300 mb-4 md:mb-0">
                 <p class="text-s uppercase text-gray-500">Projects Completed</p>
                 <p class="text-3xl font-bold italic">42+</p>
             </div>
 
-             <div class="px-6 py-4">
+             <div class="px-6 py-4 md:border-r border-gray-300 ">
                 <p class="text-s uppercase text-gray-500">Global Awards</p>
                 <p class="text-3xl font-bold italic">12</p>
             </div>
 
-            <div class="px-6 py-4">
+            <div class="px-6 py-4 border-r border-gray-300">
                 <p class="text-s uppercase text-gray-500">Technical Certs</p>
                 <p class="text-3xl font-bold italic">08</p>
             </div>
 
-            <div class="px-6 py-4">
+            <div class="px-6 py-4 border-gray-300">
                 <p class="text-s uppercase text-gray-500">Design Labs</p>
                 <p class="text-3xl font-bold italic">03</p>
             </div>
@@ -117,10 +117,10 @@
         </section>
 
         <!--Featured Project, Methodology, Lab Archive, Contact Page Link-->
-        <section class="grid grid-cols-4 gap-4 p-10">
+        <section class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:p-10 mt-8 lg:mt-0">
 
             <!--left side of section-->
-            <article class="col-span-2 relative overflow-hidden
+            <article class="col-span-1 lg:col-span-2 relative overflow-hidden
             bg-[url(featured-project-background.jpg)] bg-cover bg-center bg-no-repeat">
 
                 <div class="flex flex-col h-full p-8 mr-4 justify-end text-white">
@@ -132,18 +132,18 @@
             </article>
 
             <!--right side of section-->
-            <div class="col-span-2 ml-4">
+            <div class="col-span-1 lg:col-span-2 ml-4 mr-4 lg:mr-0">
 
                 <!--methodology box-->
                 <div class="bg-gray-200 p-10 pl-8 pr-8">
                     <div>
                         <p class=" text-xl font-normal tracking-widest mb-4">Methodology</p>
                         <h2 class="text-3xl mb-4">Bim Integration & structural <br>analytics</h2>
-                        <p id="methodology-text" class="normal-case font-normal mb-4 min-h-[80px] h-[160px] w-4/5 text-lg">Every project follows a rigid grid system of 8px increments,
+                        <p id="methodology-text" class="normal-case font-normal mb-4 h-[100px] w-full md:w-4/5 text-base md:text-lg">Every project follows a rigid grid system of 8px increments,
                         ensuring mathematical perfection from initial concept to the final blueprint.</p>
                     </div>
 
-                    <div class="grid grid-cols-3 border-t-4 border-gray-300 pt-6 text-3xl font-normal gap-4">
+                    <div class="grid grid-cols-3 border-t-4 border-gray-300 pt-6 text-xs md:text-3xl font-normal gap-4 pr-8">
                         <button
                             class="group cursor-pointer text-left"
                             data-topic="cad"
@@ -173,13 +173,13 @@
                 </div>
 
                 <!--projects and contact page links-->
-                <div class="flex justify-between col-span-2 mt-8 min-h-[200px] md:min-h-[550px] gap-8">
-                    <div class="bg-gray-100 flex-1 p-8 border-r-2 relative">
+                <div class="flex flex-col md:flex-row justify-between col-span-1 md:col-span-2 mt-8 gap-8">
+                    <div class="bg-gray-200 flex-1 p-8 border-r-2 relative min-h-[200px] sm:min-h-[300px] md:min-h-[400px] lg:min-h-[550px]">
                         <h3 class="font-normal tracking-widest text-xl">Lab Archive</h3>
                         <p class="text-3xl mt-2">Shadow Studies</p>
-                        <a href="projects/shadow-studies.html" class="absolute right-0 bottom-0 max-w-2/5 max-h-2/5 hover:border border-white" >
+                        <a href="projects/shadow-studies.html" class="absolute right-0 bottom-0 w-1/5 sm:w-1/3 aspect-square hover:border border-gray-200" >
                             <img src="black-space-background.jpg" alt="Image for Shadow Studies"
-                            class="w-full h-auto">                        
+                            class="w-full h-full object-cover">                        
                         </a>
                     </div>
 
@@ -193,17 +193,15 @@
                 </div>
             </div>
             
-            
-
-
+        
         </section>
     
         <!--Current Projects Section-->
         <section>
             <!--Current Projects title and sorting bar -->
-            <div class="border-b-4 pb-10 px-8">
+            <div class="border-b-4 pb-10 px-8 mt-8">
                     <div class="flex items-start justify-between">
-                        <h1 class="text-5xl pl-4">Current Projects</h1>
+                        <h1 class="text-4xl md:text-5xl pl-4">Current Projects</h1>
                         <div class="flex flex-col items-end">
                             <label for="sort"
                             class="font-normal tracking-widest mb-2 text-xl"
@@ -229,9 +227,9 @@
         </section>
 
         <!-- Sign up for email alerts section -->
-        <section class="bg-black text-white py-10 pb-50 mt-30">
-                <h1 class="text-center text-7xl max-w-4/5 mx-auto mt-20">Stay updated on the latest structural investigations.</h1>
-                <form id="newsletter-form" class="mx-auto mt-20 max-w-2/5">
+        <section class="bg-black text-white pt-4 md:pt-10 pb-25 md:pb-50 mt-4 md:mt-30">
+                <h1 class="text-center text-4xl sm:text-5xl lg:text-7xl max-w-4/5 mx-auto mt-20">Stay updated on the latest structural investigations.</h1>
+                <form id="newsletter-form" class="mx-auto mt-8 md:mt-20 max-w-2/5">
 
                     <div class="flex border-b-2 border-white">
 
@@ -241,7 +239,7 @@
                         type="email"
                         placeholder="EMAIL ADDRESS"
                         required
-                        class="flex-1 bg-transparent py-4 text-sm tracking-widest placeholder-gray-700 outline-none"
+                        class="flex-1 bg-transparent py-4 text-xs md:text-sm tracking-widest placeholder-gray-700 outline-none"
                         >
 
                         <button
@@ -264,15 +262,15 @@
     <!--footer section-->
     <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
 
-        <div class="grid grid-cols-2 p-3">
+        <div class="flex flex-col md:grid md:grid-cols-2 p-3">
 
-            <div class="flex text-sm text-center font-normal px-8">
+            <div class="flex order-2 md:order-1 text-sm justify-center md:justify-start text-center mt-4 md:mt-0 font-normal px-8">
 
             © 2024 Architectural_systems. all rights reserved.
             </div>
 
-            <div>
-                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+            <div class="order-1 md:order-2">
+                <ul class="flex justify-center md:justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
                     <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
                     <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
                     <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>

@@ -161,8 +161,6 @@ const projects = [
 ];
 
 /* code for changing project list on dropdown menu on home page */
-
-
 const projectList = document.querySelector("#project-list");
 const sort = document.querySelector("#sort");
 
@@ -175,23 +173,23 @@ function displayProjects(year) {
     );
 
     projectList.innerHTML = filteredProjects.map(project => `
-        <article class="grid grid-cols-[10%_25%_15%_25%_25%] items-center py-6 pl-10 w-full">
+        <article class="grid grid-cols-[10%_25%_15%_25%_25%] items-center py-6 pl-10 gap-2 w-full">
 
-            <span class="text-sm">
+            <span class="text-[6px] sm:text-sm">
                 ${project.number}
             </span>
 
-            <a class="hover:underline" href="${project.url}">
+            <a class="hover:underline text-[10px] sm:text-base" href="${project.url}">
                 ${project.title}
             </a>
 
-            <span class="text-sm font-normal">
+            <span class="text-[6px] sm:text-sm font-normal">
                 ${project.location}
             </span>
 
             <div class="flex gap-2">
                 ${project.tags.map(tag => `
-                    <span class="bg-gray-200 px-2 py-1 text-xs uppercase">
+                    <span class="bg-gray-200 px-2 py-1 text-[6px] sm:text-xs uppercase">
                         ${tag}
                     </span>
                 `).join("")}

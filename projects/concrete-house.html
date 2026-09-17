@@ -21,36 +21,37 @@
 
 <body class="uppercase font-bold">
 
-       <header>
+    <!--header section-->
+    <header>
 
-        <div class="grid grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2">
+        <div class="flex flex-col md:grid md:grid-cols-3 border-b-3 border-b-deep-charcoal p-1 py-2 md:items-center">
             <!--- navigation bar -->
-            <div class="flex">
 
+            <div class="flex justify-between items-center md:contents">
 
-                <a href="index.html" class="flex tracking-tight transition-colors duration-300 items-center text-lg px-2 hover:text-brand-gold">
-                Student_Portfolio_v1
+                <a href="index.html" class="flex tracking-tight transition-colors duration-300 justify-between text-base md:text-lg px-2 hover:text-brand-gold md:order-1">
+                    Student_Portfolio_v1
                 </a>
+
+                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold md:order-3 md:justify-self-end">Download_CV</a>
 
             </div>
 
-            <nav class="flex items-center justify-center text-gray-600">
+            <nav class="flex items-center justify-center mt-4 md:mt-0 md:order-2 text-gray-600">
                 <ul class="flex items-center gap-8 font-normal">
-                    <li><a href="../index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
-                    <li><a href="../projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
-                    <li><a href="../contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
+                    <li><a href="index.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Home</a></li>
+                    <li><a href="projects.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Projects</a></li>
+                    <li><a href="contact.html" class="inline-block border-b-2 border-transparent transition-transform duration-300 hover:-translate-y-1 hover:border-deep-charcoal hover:text-black">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="flex justify-end items-center">
-                <a href="cv.pdf" class="bg-deep-charcoal p-2 font-normal transition-colors duration-300 tracking-widest text-white hover:text-brand-gold">Download_CV</a>
-            </div>
          </div>
+
     </header>
 
 
     <main>
-        <p class="m-32 p-32 items-center text-9xl">Work in Progress</p>
+        <p class="m-8 md:m-32 p-8 md:p-32 items-center text-xl md:text-6xl lg:text-9xl">Work in Progress</p>
     </main>
 
 
@@ -58,15 +59,15 @@
     <!--footer section-->
     <footer class="border-t-4 border-black font-black mt-30 py-6 bg-gray-200">
 
-        <div class="grid grid-cols-2 p-3">
+        <div class="flex flex-col md:grid md:grid-cols-2 p-3">
 
-            <div class="flex text-sm text-center font-normal px-8">
+            <div class="flex order-2 md:order-1 text-sm justify-center md:justify-start text-center mt-4 md:mt-0 font-normal px-8">
 
             © 2024 Architectural_systems. all rights reserved.
             </div>
 
-            <div>
-                <ul class="flex justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
+            <div class="order-1 md:order-2">
+                <ul class="flex justify-center md:justify-end gap-8 text-normal font-normal underline hover:cursor-pointer text-sm px-4">
                     <li><a href="https://www.linkedin.com/" target="_blank" class="hover:text-brand-gold">Linkedin</a></li>
                     <li><a href="https://github.com/" target="_blank" class="hover:text-brand-gold">Github</a></li>
                     <li><a href= "cv.pdf" target="_blank" class="hover:text-brand-gold">Read cv</a></li>
